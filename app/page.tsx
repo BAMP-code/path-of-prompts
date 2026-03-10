@@ -85,7 +85,7 @@ export default function Home() {
 
   const abortRef = useRef<AbortController | null>(null);
 
-  const handleSubmit = useCallback(async (prompt: string, provider: Provider) => {
+  const handleSubmit = useCallback(async (prompt: string, provider: Provider, apiKey: string) => {
     // Reset everything
     bufferedLlm.current = "";
     bufferedGeojson.current = null;
@@ -111,7 +111,7 @@ export default function Home() {
       const response = await fetch("/api/trace", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt, provider }),
+        body: JSON.stringify({ prompt, provider, apiKey }),
         signal: controller.signal,
       });
 

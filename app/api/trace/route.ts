@@ -41,9 +41,10 @@ function estimateTokens(text: string): number {
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
-  const { prompt, provider = "openai" } = body as {
+  const { prompt, provider = "openai", apiKey } = body as {
     prompt: string;
     provider: Provider;
+    apiKey?: string;
   };
 
   if (!prompt || typeof prompt !== "string" || prompt.trim().length === 0) {
@@ -67,8 +68,8 @@ export async function POST(req: NextRequest) {
         // Phase 1: Stream LLM response
         const llmStream =
           provider === "anthropic"
-            ? streamAnthropic(prompt, model)
-            : streamOpenAI(prompt, model);
+            ? streamAnthropic(prompt, model, apiKey)
+            : streamOpenAI(prompt, model, apiKey);
 
         // Start infrastructure enrichment concurrently
         const infraPromise = enrichInfrastructure(dataCenter);
