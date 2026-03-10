@@ -1,0 +1,127 @@
+{
+  "openai": {
+    "default": {
+      "id": "azure-eastus",
+      "name": "Microsoft Azure — East US (Virginia)",
+      "provider": "Microsoft Azure",
+      "region": "eastus",
+      "lat": 37.3719,
+      "lon": -79.8164,
+      "hardwareGeneration": "NVIDIA H100",
+      "territory": "Virginia, United States",
+      "country": "US"
+    },
+    "gpt-4o": {
+      "id": "azure-eastus",
+      "name": "Microsoft Azure — East US (Virginia)",
+      "provider": "Microsoft Azure",
+      "region": "eastus",
+      "lat": 37.3719,
+      "lon": -79.8164,
+      "hardwareGeneration": "NVIDIA H100",
+      "territory": "Virginia, United States",
+      "country": "US"
+    },
+    "gpt-4": {
+      "id": "azure-eastus",
+      "name": "Microsoft Azure — East US (Virginia)",
+      "provider": "Microsoft Azure",
+      "region": "eastus",
+      "lat": 37.3719,
+      "lon": -79.8164,
+      "hardwareGeneration": "NVIDIA H100",
+      "territory": "Virginia, United States",
+      "country": "US"
+    },
+    "gpt-4o-mini": {
+      "id": "azure-westus2",
+      "name": "Microsoft Azure — West US 2 (Washington)",
+      "provider": "Microsoft Azure",
+      "region": "westus2",
+      "lat": 47.233,
+      "lon": -119.852,
+      "hardwareGeneration": "NVIDIA A100",
+      "territory": "Washington State, United States",
+      "country": "US"
+    },
+    "gpt-3.5-turbo": {
+      "id": "azure-northcentralus",
+      "name": "Microsoft Azure — North Central US (Illinois)",
+      "provider": "Microsoft Azure",
+      "region": "northcentralus",
+      "lat": 41.8819,
+      "lon": -87.6278,
+      "hardwareGeneration": "NVIDIA A100",
+      "territory": "Illinois, United States",
+      "country": "US"
+    },
+    "o1": {
+      "id": "stargate-abilene",
+      "name": "OpenAI Stargate — Abilene, Texas",
+      "provider": "OpenAI / Oracle",
+      "region": "stargate-tx",
+      "lat": 32.4487,
+      "lon": -99.7331,
+      "hardwareGeneration": "NVIDIA GB200 NVL72",
+      "territory": "Taylor County, Texas, United States",
+      "country": "US"
+    },
+    "o3": {
+      "id": "stargate-abilene",
+      "name": "OpenAI Stargate — Abilene, Texas",
+      "provider": "OpenAI / Oracle",
+      "region": "stargate-tx",
+      "lat": 32.4487,
+      "lon": -99.7331,
+      "hardwareGeneration": "NVIDIA GB200 NVL72",
+      "territory": "Taylor County, Texas, United States",
+      "country": "US"
+    }
+  },
+  "anthropic": {
+    "default": {
+      "id": "aws-us-east-1",
+      "name": "Amazon Web Services — US East 1 (N. Virginia)",
+      "provider": "Amazon Web Services",
+      "region": "us-east-1",
+      "lat": 38.9458,
+      "lon": -77.4975,
+      "hardwareGeneration": "AWS Trainium2",
+      "territory": "Northern Virginia, United States",
+      "country": "US"
+    },
+    "claude-3-5-sonnet": {
+      "id": "aws-us-east-1",
+      "name": "Amazon Web Services — US East 1 (N. Virginia)",
+      "provider": "Amazon Web Services",
+      "region": "us-east-1",
+      "lat": 38.9458,
+      "lon": -77.4975,
+      "hardwareGeneration": "AWS Trainium2",
+      "territory": "Northern Virginia, United States",
+      "country": "US"
+    },
+    "claude-3-opus": {
+      "id": "aws-us-east-1",
+      "name": "Amazon Web Services — US East 1 (N. Virginia)",
+      "provider": "Amazon Web Services",
+      "region": "us-east-1",
+      "lat": 38.9458,
+      "lon": -77.4975,
+      "hardwareGeneration": "AWS Trainium2",
+      "territory": "Northern Virginia, United States",
+      "country": "US"
+    },
+    "claude-3-haiku": {
+      "id": "aws-us-west-2",
+      "name": "Amazon Web Services — US West 2 (Oregon)",
+      "provider": "Amazon Web Services",
+      "region": "us-west-2",
+      "lat": 45.5231,
+      "lon": -122.6765,
+      "hardwareGeneration": "AWS Inferentia2",
+      "territory": "Oregon, United States",
+      "country": "US"
+    }
+  }
+}

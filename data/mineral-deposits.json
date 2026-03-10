@@ -1,0 +1,83 @@
+{
+  "neodymium": [
+    { "name": "Bayan Obo Mine", "lon": 109.97, "lat": 41.81, "country": "China", "status": "Active", "note": "World's largest rare earth deposit" },
+    { "name": "Mountain Pass Mine", "lon": -115.54, "lat": 35.48, "country": "United States", "status": "Active" },
+    { "name": "Mount Weld Mine", "lon": 122.23, "lat": -27.35, "country": "Australia", "status": "Active" },
+    { "name": "Longnan REE District", "lon": 114.92, "lat": 24.91, "country": "China", "status": "Active" },
+    { "name": "Ganzhou REE District", "lon": 114.94, "lat": 25.85, "country": "China", "status": "Active" },
+    { "name": "Bayan Obo East", "lon": 110.30, "lat": 41.79, "country": "China", "status": "Active" }
+  ],
+  "dysprosium": [
+    { "name": "Jiangxi Ion-Adsorption REE", "lon": 115.10, "lat": 26.20, "country": "China", "status": "Active" },
+    { "name": "Guangdong REE Zone", "lon": 114.20, "lat": 24.50, "country": "China", "status": "Active" },
+    { "name": "Fujian REE District", "lon": 117.50, "lat": 25.80, "country": "China", "status": "Active" }
+  ],
+  "terbium": [
+    { "name": "Ganzhou Heavy REE", "lon": 114.94, "lat": 25.85, "country": "China", "status": "Active" },
+    { "name": "Hunan REE District", "lon": 111.50, "lat": 27.00, "country": "China", "status": "Active" }
+  ],
+  "praseodymium": [
+    { "name": "Bayan Obo Complex", "lon": 109.97, "lat": 41.81, "country": "China", "status": "Active" },
+    { "name": "Mount Weld (Lynas)", "lon": 122.23, "lat": -27.35, "country": "Australia", "status": "Active" }
+  ],
+  "lanthanum": [
+    { "name": "Bayan Obo Mine", "lon": 109.97, "lat": 41.81, "country": "China", "status": "Active" },
+    { "name": "Longnan REE Complex", "lon": 114.92, "lat": 24.91, "country": "China", "status": "Active" }
+  ],
+  "cobalt": [
+    { "name": "Tenke Fungurume Mine", "lon": 26.11, "lat": -10.54, "country": "DRC", "status": "Active", "note": "One of the world's largest cobalt deposits" },
+    { "name": "Mutanda Mine", "lon": 24.63, "lat": -10.28, "country": "DRC", "status": "Active" },
+    { "name": "Kamoto Copper Company", "lon": 25.45, "lat": -10.87, "country": "DRC", "status": "Active" },
+    { "name": "Chambishi Mine", "lon": 28.03, "lat": -12.65, "country": "Zambia", "status": "Active" },
+    { "name": "Bou Azzer Mine", "lon": -6.45, "lat": 30.52, "country": "Morocco", "status": "Active" },
+    { "name": "Ambatovy Mine", "lon": 48.34, "lat": -18.90, "country": "Madagascar", "status": "Active" }
+  ],
+  "tantalum": [
+    { "name": "Wodgina Mine", "lon": 118.67, "lat": -21.08, "country": "Australia", "status": "Active" },
+    { "name": "Greenbushes Mine", "lon": 116.06, "lat": -33.85, "country": "Australia", "status": "Active" },
+    { "name": "Manono Project", "lon": 27.41, "lat": -7.30, "country": "DRC", "status": "Development" },
+    { "name": "Tanco Mine", "lon": -95.18, "lat": 51.78, "country": "Canada", "status": "Active" },
+    { "name": "Somina Mine", "lon": 14.93, "lat": -2.21, "country": "Nigeria", "status": "Active" }
+  ],
+  "gallium": [
+    { "name": "Zhonghao Nonferrous (Zhuzhou)", "lon": 113.13, "lat": 27.84, "country": "China", "status": "Active", "note": "Gallium recovered from aluminum smelting" },
+    { "name": "Henan Aluminum Complex", "lon": 112.45, "lat": 34.75, "country": "China", "status": "Active" },
+    { "name": "Shanxi Aluminum Smelters", "lon": 112.55, "lat": 37.87, "country": "China", "status": "Active" },
+    { "name": "Chalco Zhongzhou", "lon": 113.39, "lat": 34.74, "country": "China", "status": "Active" }
+  ],
+  "germanium": [
+    { "name": "Yunnan Chihong Zinc", "lon": 103.22, "lat": 26.37, "country": "China", "status": "Active" },
+    { "name": "Jinding Zinc-Lead Mine", "lon": 99.11, "lat": 26.40, "country": "China", "status": "Active" },
+    { "name": "Freiberg Smelter", "lon": 13.34, "lat": 50.92, "country": "Germany", "status": "Active" },
+    { "name": "Tri-State Zinc District", "lon": -94.84, "lat": 37.00, "country": "United States", "status": "Historical" }
+  ],
+  "indium": [
+    { "name": "Dachang Tin-Indium Mine", "lon": 107.11, "lat": 24.57, "country": "China", "status": "Active" },
+    { "name": "Yunnan Tin Mine", "lon": 103.22, "lat": 23.36, "country": "China", "status": "Active" },
+    { "name": "Kidd Creek Mine", "lon": -80.72, "lat": 48.68, "country": "Canada", "status": "Active" },
+    { "name": "Flin Flon VMS", "lon": -101.88, "lat": 54.77, "country": "Canada", "status": "Active" }
+  ],
+  "silicon": [
+    { "name": "Anshan Iron & Steel", "lon": 122.99, "lat": 41.11, "country": "China", "status": "Active" },
+    { "name": "Xinjiang Quartz Deposits", "lon": 87.60, "lat": 43.79, "country": "China", "status": "Active" },
+    { "name": "Spruce Pine Quartz District", "lon": -82.07, "lat": 35.91, "country": "United States", "status": "Active", "note": "Highest-purity quartz for semiconductors" },
+    { "name": "Unimin Brazil Quartz", "lon": -40.30, "lat": -19.97, "country": "Brazil", "status": "Active" }
+  ],
+  "copper": [
+    { "name": "Escondida Mine", "lon": -69.06, "lat": -24.27, "country": "Chile", "status": "Active", "note": "World's largest copper mine" },
+    { "name": "Collahuasi Mine", "lon": -68.70, "lat": -20.98, "country": "Chile", "status": "Active" },
+    { "name": "Grasberg Mine", "lon": 137.11, "lat": -4.05, "country": "Indonesia", "status": "Active" },
+    { "name": "Cerro Verde Mine", "lon": -71.55, "lat": -16.55, "country": "Peru", "status": "Active" },
+    { "name": "Bingham Canyon Mine", "lon": -112.15, "lat": 40.52, "country": "United States", "status": "Active" },
+    { "name": "Morenci Mine", "lon": -109.37, "lat": 33.08, "country": "United States", "status": "Active" },
+    { "name": "El Teniente Mine", "lon": -70.35, "lat": -34.08, "country": "Chile", "status": "Active" }
+  ],
+  "lithium": [
+    { "name": "Salar de Atacama", "lon": -68.30, "lat": -23.50, "country": "Chile", "status": "Active", "note": "World's largest lithium brine operation" },
+    { "name": "Salar del Rincon", "lon": -67.30, "lat": -23.80, "country": "Argentina", "status": "Active" },
+    { "name": "Salar de Uyuni", "lon": -67.63, "lat": -20.13, "country": "Bolivia", "status": "Development" },
+    { "name": "Greenbushes Lithium Mine", "lon": 116.06, "lat": -33.85, "country": "Australia", "status": "Active" },
+    { "name": "Pilgangoora Mine", "lon": 116.73, "lat": -21.73, "country": "Australia", "status": "Active" },
+    { "name": "Silver Peak Mine", "lon": -117.60, "lat": 37.75, "country": "United States", "status": "Active" }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "NVIDIA H100": {
+    "description": "NVIDIA H100 SXM5 — 80GB HBM3 GPU used in hyperscale AI training clusters",
+    "minerals": [
+      {
+        "name": "neodymium",
+        "displayName": "Neodymium (Nd)",
+        "role": "NdFeB permanent magnets in cooling fans and motor drives",
+        "primarySourceRegion": "Inner Mongolia, China",
+        "sourceBbox": [95.0, 37.0, 125.0, 53.0]
+      },
+      {
+        "name": "dysprosium",
+        "displayName": "Dysprosium (Dy)",
+        "role": "High-temperature NdFeB magnet additive for server cooling systems",
+        "primarySourceRegion": "Jiangxi Province, China",
+        "sourceBbox": [113.0, 23.0, 120.0, 30.0]
+      },
+      {
+        "name": "cobalt",
+        "displayName": "Cobalt (Co)",
+        "role": "UPS battery cathodes providing power resilience for data center racks",
+        "primarySourceRegion": "Katanga Province, Democratic Republic of Congo",
+        "sourceBbox": [22.0, -12.0, 30.0, -5.0]
+      },
+      {
+        "name": "tantalum",
+        "displayName": "Tantalum (Ta)",
+        "role": "Tantalum capacitors for voltage regulation on GPU power delivery networks",
+        "primarySourceRegion": "Eastern Democratic Republic of Congo",
+        "sourceBbox": [26.0, -5.0, 32.0, 2.0]
+      },
+      {
+        "name": "gallium",
+        "displayName": "Gallium (Ga)",
+        "role": "GaN-on-SiC power conversion in NVLink interconnects",
+        "primarySourceRegion": "Shanxi and Henan Provinces, China",
+        "sourceBbox": [108.0, 33.0, 116.0, 39.0]
+      },
+      {
+        "name": "copper",
+        "displayName": "Copper (Cu)",
+        "role": "GPU substrate wiring, HBM3 packaging, power delivery busbars",
+        "primarySourceRegion": "Atacama Region, Chile",
+        "sourceBbox": [-72.0, -28.0, -65.0, -17.0]
+      }
+    ]
+  },
+  "NVIDIA GB200 NVL72": {
+    "description": "NVIDIA Blackwell GB200 NVL72 — next-generation 72-GPU rack-scale system",
+    "minerals": [
+      {
+        "name": "neodymium",
+        "displayName": "Neodymium (Nd)",
+        "role": "NdFeB permanent magnets in liquid-cooled fan arrays",
+        "primarySourceRegion": "Inner Mongolia, China",
+        "sourceBbox": [95.0, 37.0, 125.0, 53.0]
+      },
+      {
+        "name": "terbium",
+        "displayName": "Terbium (Tb)",
+        "role": "High-performance magnet stabilizer for rack-level cooling systems",
+        "primarySourceRegion": "Jiangxi Province, China",
+        "sourceBbox": [113.0, 23.0, 120.0, 30.0]
+      },
+      {
+        "name": "cobalt",
+        "displayName": "Cobalt (Co)",
+        "role": "Lithium-ion UPS battery cathodes for fault-tolerant power",
+        "primarySourceRegion": "Katanga Province, Democratic Republic of Congo",
+        "sourceBbox": [22.0, -12.0, 30.0, -5.0]
+      },
+      {
+        "name": "gallium",
+        "displayName": "Gallium (Ga)",
+        "role": "GaN power semiconductors in 1kW+ power supply units",
+        "primarySourceRegion": "Shanxi and Henan Provinces, China",
+        "sourceBbox": [108.0, 33.0, 116.0, 39.0]
+      },
+      {
+        "name": "indium",
+        "displayName": "Indium (In)",
+        "role": "ITO transparent electrodes in rack monitoring displays and sensors",
+        "primarySourceRegion": "Yunnan Province, China",
+        "sourceBbox": [97.0, 21.0, 106.0, 29.0]
+      },
+      {
+        "name": "copper",
+        "displayName": "Copper (Cu)",
+        "role": "NVLink 5 interconnect traces, cold plate manifolds, power busbars",
+        "primarySourceRegion": "Atacama Region, Chile",
+        "sourceBbox": [-72.0, -28.0, -65.0, -17.0]
+      },
+      {
+        "name": "lithium",
+        "displayName": "Lithium (Li)",
+        "role": "Rack-level Li-ion UPS and battery backup systems",
+        "primarySourceRegion": "Lithium Triangle (Chile/Argentina/Bolivia)",
+        "sourceBbox": [-70.0, -28.0, -57.0, -16.0]
+      }
+    ]
+  },
+  "NVIDIA A100": {
+    "description": "NVIDIA A100 SXM4 — 80GB HBM2e GPU used in AI inference and training",
+    "minerals": [
+      {
+        "name": "neodymium",
+        "displayName": "Neodymium (Nd)",
+        "role": "NdFeB permanent magnets in cooling fans",
+        "primarySourceRegion": "Inner Mongolia, China",
+        "sourceBbox": [95.0, 37.0, 125.0, 53.0]
+      },
+      {
+        "name": "cobalt",
+        "displayName": "Cobalt (Co)",
+        "role": "Battery backup systems and UPS cathode material",
+        "primarySourceRegion": "Katanga Province, Democratic Republic of Congo",
+        "sourceBbox": [22.0, -12.0, 30.0, -5.0]
+      },
+      {
+        "name": "tantalum",
+        "displayName": "Tantalum (Ta)",
+        "role": "Capacitor arrays in GPU power delivery circuits",
+        "primarySourceRegion": "Eastern Democratic Republic of Congo",
+        "sourceBbox": [26.0, -5.0, 32.0, 2.0]
+      },
+      {
+        "name": "germanium",
+        "displayName": "Germanium (Ge)",
+        "role": "Fiber optic transceivers for NVLink and InfiniBand interconnects",
+        "primarySourceRegion": "Yunnan Province, China",
+        "sourceBbox": [97.0, 21.0, 106.0, 29.0]
+      },
+      {
+        "name": "copper",
+        "displayName": "Copper (Cu)",
+        "role": "HBM2e packaging, substrate traces, power delivery",
+        "primarySourceRegion": "Atacama Region, Chile",
+        "sourceBbox": [-72.0, -28.0, -65.0, -17.0]
+      }
+    ]
+  },
+  "NVIDIA A10": {
+    "description": "NVIDIA A10 — 24GB GDDR6 inference-focused GPU",
+    "minerals": [
+      {
+        "name": "neodymium",
+        "displayName": "Neodymium (Nd)",
+        "role": "Permanent magnets in cooling fans",
+        "primarySourceRegion": "Inner Mongolia, China",
+        "sourceBbox": [95.0, 37.0, 125.0, 53.0]
+      },
+      {
+        "name": "cobalt",
+        "displayName": "Cobalt (Co)",
+        "role": "Battery backup cathode material",
+        "primarySourceRegion": "Katanga Province, Democratic Republic of Congo",
+        "sourceBbox": [22.0, -12.0, 30.0, -5.0]
+      },
+      {
+        "name": "copper",
+        "displayName": "Copper (Cu)",
+        "role": "PCIe substrate wiring and power delivery",
+        "primarySourceRegion": "Atacama Region, Chile",
+        "sourceBbox": [-72.0, -28.0, -65.0, -17.0]
+      }
+    ]
+  },
+  "AWS Trainium2": {
+    "description": "AWS Trainium2 — custom AI training chip designed by Annapurna Labs for Amazon EC2",
+    "minerals": [
+      {
+        "name": "neodymium",
+        "displayName": "Neodymium (Nd)",
+        "role": "Permanent magnets in rack cooling infrastructure",
+        "primarySourceRegion": "Inner Mongolia, China",
+        "sourceBbox": [95.0, 37.0, 125.0, 53.0]
+      },
+      {
+        "name": "cobalt",
+        "displayName": "Cobalt (Co)",
+        "role": "Li-ion UPS and standby power systems",
+        "primarySourceRegion": "Katanga Province, Democratic Republic of Congo",
+        "sourceBbox": [22.0, -12.0, 30.0, -5.0]
+      },
+      {
+        "name": "gallium",
+        "displayName": "Gallium (Ga)",
+        "role": "GaAs compound semiconductors in optical transceivers",
+        "primarySourceRegion": "Shanxi and Henan Provinces, China",
+        "sourceBbox": [108.0, 33.0, 116.0, 39.0]
+      },
+      {
+        "name": "tantalum",
+        "displayName": "Tantalum (Ta)",
+        "role": "Capacitors in Trn2 power management ICs",
+        "primarySourceRegion": "Eastern Democratic Republic of Congo",
+        "sourceBbox": [26.0, -5.0, 32.0, 2.0]
+      },
+      {
+        "name": "copper",
+        "displayName": "Copper (Cu)",
+        "role": "PCB traces and power delivery in custom silicon packaging",
+        "primarySourceRegion": "Atacama Region, Chile",
+        "sourceBbox": [-72.0, -28.0, -65.0, -17.0]
+      }
+    ]
+  },
+  "AWS Inferentia2": {
+    "description": "AWS Inferentia2 — custom AI inference accelerator for Amazon EC2 Inf2 instances",
+    "minerals": [
+      {
+        "name": "neodymium",
+        "displayName": "Neodymium (Nd)",
+        "role": "Cooling fan permanent magnets",
+        "primarySourceRegion": "Inner Mongolia, China",
+        "sourceBbox": [95.0, 37.0, 125.0, 53.0]
+      },
+      {
+        "name": "cobalt",
+        "displayName": "Cobalt (Co)",
+        "role": "Data center UPS battery cathodes",
+        "primarySourceRegion": "Katanga Province, Democratic Republic of Congo",
+        "sourceBbox": [22.0, -12.0, 30.0, -5.0]
+      },
+      {
+        "name": "copper",
+        "displayName": "Copper (Cu)",
+        "role": "Chip substrate wiring and rack power delivery",
+        "primarySourceRegion": "Atacama Region, Chile",
+        "sourceBbox": [-72.0, -28.0, -65.0, -17.0]
+      }
+    ]
+  }
+}
