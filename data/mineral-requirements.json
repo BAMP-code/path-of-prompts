@@ -1,6 +1,6 @@
 {
   "NVIDIA H100": {
-    "description": "NVIDIA H100 SXM5 — 80GB HBM3 GPU used in hyperscale AI training clusters",
+    "description": "NVIDIA H100 SXM5, 80GB HBM3 GPU used in hyperscale AI training clusters",
     "minerals": [
       {
         "name": "neodymium",
@@ -47,7 +47,7 @@
     ]
   },
   "NVIDIA GB200 NVL72": {
-    "description": "NVIDIA Blackwell GB200 NVL72 — next-generation 72-GPU rack-scale system",
+    "description": "NVIDIA Blackwell GB200 NVL72, next-generation 72-GPU rack-scale system",
     "minerals": [
       {
         "name": "neodymium",
@@ -101,7 +101,7 @@
     ]
   },
   "NVIDIA A100": {
-    "description": "NVIDIA A100 SXM4 — 80GB HBM2e GPU used in AI inference and training",
+    "description": "NVIDIA A100 SXM4, 80GB HBM2e GPU used in AI inference and training",
     "minerals": [
       {
         "name": "neodymium",
@@ -141,7 +141,7 @@
     ]
   },
   "NVIDIA A10": {
-    "description": "NVIDIA A10 — 24GB GDDR6 inference-focused GPU",
+    "description": "NVIDIA A10, 24GB GDDR6 inference-focused GPU",
     "minerals": [
       {
         "name": "neodymium",
@@ -167,7 +167,7 @@
     ]
   },
   "AWS Trainium2": {
-    "description": "AWS Trainium2 — custom AI training chip designed by Annapurna Labs for Amazon EC2",
+    "description": "AWS Trainium2, custom AI training chip designed by Annapurna Labs for Amazon EC2",
     "minerals": [
       {
         "name": "neodymium",
@@ -207,7 +207,7 @@
     ]
   },
   "AWS Inferentia2": {
-    "description": "AWS Inferentia2 — custom AI inference accelerator for Amazon EC2 Inf2 instances",
+    "description": "AWS Inferentia2, custom AI inference accelerator for Amazon EC2 Inf2 instances",
     "minerals": [
       {
         "name": "neodymium",

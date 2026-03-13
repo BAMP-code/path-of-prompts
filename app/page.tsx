@@ -21,6 +21,208 @@ export type LocationConsent = "pending" | "granted" | "skipped";
 
 const DEFAULT_COORDS: [number, number] = [-74.006, 40.7128]; // NYC fallback
 
+// ---------------------------------------------------------------------------
+// Demo mode — fully client-side, no API key required
+// ---------------------------------------------------------------------------
+const DEMO_LLM_RESPONSE = `This query is being processed by OpenAI's GPT-4o mini model, running on servers located in Council Bluffs, Iowa — one of the largest data center campuses in the United States.
+
+The physical infrastructure behind this single request spans three continents. The NVIDIA H100 GPUs that accelerated this response contain neodymium magnets sourced from Inner Mongolia, cobalt from the Democratic Republic of Congo, and tantalum capacitors from eastern DRC. The gallium nitride power semiconductors trace back to Shanxi Province, China.
+
+Cooling this facility draws from the Platte River aquifer system. A single large-scale AI training run can consume millions of litres of water for evaporative cooling — water that does not return to the watershed.
+
+The electricity powering this response comes from a regional grid that includes coal, natural gas, and a growing share of wind generation from the Great Plains.
+
+Every prompt has a geography.`;
+
+const DEMO_DATACENTER: DataCenterNode = {
+  id: "openai-us-central-iowa",
+  name: "Microsoft Iowa Data Center (OpenAI)",
+  provider: "openai",
+  region: "us-central1",
+  lat: 41.2619,
+  lon: -95.8608,
+  hardwareGeneration: "NVIDIA H100",
+  territory: "Council Bluffs, Iowa, USA",
+  country: "US",
+  waterSystem: "Platte River Alluvial Aquifer",
+};
+
+const DEMO_GEOJSON: InfrastructureGeoJSON = {
+  type: "FeatureCollection",
+  features: [
+    {
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [-95.8608, 41.2619] },
+      properties: {
+        kind: "datacenter",
+        id: "openai-us-central-iowa",
+        name: "Microsoft Iowa Data Center (OpenAI)",
+        provider: "openai",
+        region: "us-central1",
+        hardware: "NVIDIA H100",
+        territory: "Council Bluffs, Iowa, USA",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [-96.1, 41.1] },
+      properties: {
+        siteId: "06610000",
+        siteName: "Platte River at Louisville NE",
+        aquiferCode: "110PLLT",
+        aquiferName: "Platte River Alluvial Aquifer",
+        wellDepth: 12,
+        lat: 41.1,
+        lon: -96.1,
+      },
+    },
+    {
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [-96.4, 41.3] },
+      properties: {
+        siteId: "06799000",
+        siteName: "Elkhorn River at Waterloo NE",
+        aquiferCode: "110ELHR",
+        aquiferName: "Elkhorn River Valley Alluvial Aquifer",
+        wellDepth: 18,
+        lat: 41.3,
+        lon: -96.4,
+      },
+    },
+    {
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [116.0, 42.0] },
+      properties: {
+        mrdsId: "10310093",
+        name: "Bayan Obo REE Mine",
+        commodity: "neodymium",
+        mineral: "neodymium" as const,
+        country: "China",
+        status: "Active",
+        depositType: "Carbonatite",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [26.5, -10.5] },
+      properties: {
+        mrdsId: "10031245",
+        name: "Tenke Fungurume",
+        commodity: "cobalt",
+        mineral: "cobalt" as const,
+        country: "Democratic Republic of Congo",
+        status: "Active",
+        depositType: "Sediment-hosted stratabound copper",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [29.0, -2.5] },
+      properties: {
+        mrdsId: "10044821",
+        name: "Rutongo Tantalum",
+        commodity: "tantalum",
+        mineral: "tantalum" as const,
+        country: "Democratic Republic of Congo",
+        status: "Active",
+        depositType: "Pegmatite",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [112.5, 36.5] },
+      properties: {
+        mrdsId: "10290012",
+        name: "Shanxi Gallium Smelter Region",
+        commodity: "gallium",
+        mineral: "gallium" as const,
+        country: "China",
+        status: "Active",
+        depositType: "By-product of aluminum smelting",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [-69.5, -23.5] },
+      properties: {
+        mrdsId: "10118844",
+        name: "Chuquicamata Copper Mine",
+        commodity: "copper",
+        mineral: "copper" as const,
+        country: "Chile",
+        status: "Active",
+        depositType: "Porphyry copper",
+      },
+    },
+  ],
+};
+
+const DEMO_REPORT: AuditReport = {
+  promptTokenEstimate: 4,
+  provider: "openai",
+  model: "gpt-4o-mini",
+  inferredDataCenter: {
+    ...DEMO_DATACENTER,
+    waterSystem: "Platte River Alluvial Aquifer",
+  },
+  territory: "Council Bluffs, Iowa, USA",
+  waterSystems: [
+    {
+      siteName: "Platte River at Louisville NE",
+      aquiferName: "Platte River Alluvial Aquifer",
+      siteId: "06610000",
+      lat: 41.1,
+      lon: -96.1,
+    },
+    {
+      siteName: "Elkhorn River at Waterloo NE",
+      aquiferName: "Elkhorn River Valley Alluvial Aquifer",
+      siteId: "06799000",
+      lat: 41.3,
+      lon: -96.4,
+    },
+  ],
+  minerals: [
+    {
+      mineral: "neodymium",
+      displayName: "Neodymium (Nd)",
+      role: "NdFeB permanent magnets in cooling fans and motor drives",
+      primarySourceRegion: "Inner Mongolia, China",
+      depositsFound: 3,
+    },
+    {
+      mineral: "cobalt",
+      displayName: "Cobalt (Co)",
+      role: "UPS battery cathodes providing power resilience for data center racks",
+      primarySourceRegion: "Katanga Province, Democratic Republic of Congo",
+      depositsFound: 5,
+    },
+    {
+      mineral: "tantalum",
+      displayName: "Tantalum (Ta)",
+      role: "Tantalum capacitors for voltage regulation on GPU power delivery networks",
+      primarySourceRegion: "Eastern Democratic Republic of Congo",
+      depositsFound: 2,
+    },
+    {
+      mineral: "gallium",
+      displayName: "Gallium (Ga)",
+      role: "GaN-on-SiC power conversion in NVLink interconnects",
+      primarySourceRegion: "Shanxi and Henan Provinces, China",
+      depositsFound: 1,
+    },
+    {
+      mineral: "copper",
+      displayName: "Copper (Cu)",
+      role: "GPU substrate wiring, HBM3 packaging, power delivery busbars",
+      primarySourceRegion: "Atacama Region, Chile",
+      depositsFound: 8,
+    },
+  ],
+  methodology: `This is a demonstration trace using hardcoded data to illustrate the project's methodology. In a real trace, the prompt is sent to OpenAI using the gpt-4o-mini model. Data center location is inferred from the provider's known infrastructure. Water monitoring data is sourced from the U.S. Geological Survey Water Data API. Mineral deposit data is sourced from the USGS Mineral Resources Data System (MRDS). The link between hardware models and specific minerals is derived from USGS Mineral Commodity Summaries and peer-reviewed life-cycle assessment literature.`,
+  timestamp: new Date().toISOString(),
+};
+
 export default function Home() {
   const [phase, setPhase] = useState<Phase>("landing");
   const [panelVisible, setPanelVisible] = useState(true);
@@ -188,6 +390,62 @@ export default function Home() {
     setPhase("landing");
   }, []);
 
+  const demoTimersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+
+  const handleDemo = useCallback(() => {
+    // Cancel any previous demo timers
+    demoTimersRef.current.forEach(clearTimeout);
+    demoTimersRef.current = [];
+
+    // Reset state
+    bufferedLlm.current = "";
+    bufferedGeojson.current = null;
+    bufferedDataCenter.current = null;
+    bufferedReport.current = null;
+    animationDoneRef.current = false;
+    apiDoneRef.current = false;
+
+    setLlmResponse("");
+    setGeojson(null);
+    setDataCenter(null);
+    setReport(null);
+    setError(null);
+    setIsApiDone(false);
+    setPanelVisible(true);
+    setPhase("animating");
+
+    const addTimer = (fn: () => void, ms: number) => {
+      const id = setTimeout(fn, ms);
+      demoTimersRef.current.push(id);
+    };
+
+    // Stream infrastructure data immediately so the map animation can begin
+    addTimer(() => {
+      bufferedGeojson.current = DEMO_GEOJSON;
+      bufferedDataCenter.current = DEMO_DATACENTER;
+      setGeojson(DEMO_GEOJSON);
+      setDataCenter(DEMO_DATACENTER);
+    }, 300);
+
+    // Drip the LLM response word by word
+    const words = DEMO_LLM_RESPONSE.split(" ");
+    const MS_PER_WORD = 60;
+    words.forEach((word, i) => {
+      addTimer(() => {
+        bufferedLlm.current += (i === 0 ? "" : " ") + word;
+      }, 600 + i * MS_PER_WORD);
+    });
+
+    // After all words, mark API done and buffer the report
+    const totalLlmMs = 600 + words.length * MS_PER_WORD + 200;
+    addTimer(() => {
+      bufferedReport.current = DEMO_REPORT;
+      apiDoneRef.current = true;
+      setIsApiDone(true);
+      if (animationDoneRef.current) revealResults();
+    }, totalLlmMs);
+  }, [revealResults]);
+
   // "Stay on map" — collapse panel, keep map + dots visible
   const handleStay = useCallback(() => {
     setPanelVisible(false);
@@ -272,6 +530,7 @@ export default function Home() {
             onSubmit={handleSubmit}
             isLoading={false}
             onAbort={handleAbort}
+            onDemo={handleDemo}
           />
         </div>
       </div>
@@ -347,10 +606,10 @@ export default function Home() {
               <p>
                 AI tools were used selectively in this project for:
               </p>
-              <ul className="space-y-1.5 text-white/50 pl-3">
-                <li className="flex gap-2"><span className="text-white/20 mt-0.5">—</span><span>Researching cloud infrastructure geography and data center locations</span></li>
-                <li className="flex gap-2"><span className="text-white/20 mt-0.5">—</span><span>Understanding mineral supply chains in GPU and server manufacturing</span></li>
-                <li className="flex gap-2"><span className="text-white/20 mt-0.5">—</span><span>Architectural planning and technical research</span></li>
+              <ul className="space-y-1.5 text-white/50 pl-3 list-disc list-inside">
+                <li>Researching cloud infrastructure geography and data center locations</li>
+                <li>Understanding mineral supply chains in GPU and server manufacturing</li>
+                <li>Architectural planning and technical research</li>
               </ul>
               <p>
                 All product decisions, ethical framing, visual design, and project direction

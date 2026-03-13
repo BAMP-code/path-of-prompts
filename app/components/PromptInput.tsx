@@ -7,9 +7,10 @@ interface PromptInputProps {
   onSubmit: (prompt: string, provider: Provider, apiKey: string) => void;
   isLoading: boolean;
   onAbort?: () => void;
+  onDemo?: () => void;
 }
 
-export default function PromptInput({ onSubmit, isLoading, onAbort }: PromptInputProps) {
+export default function PromptInput({ onSubmit, isLoading, onAbort, onDemo }: PromptInputProps) {
   const [prompt, setPrompt] = useState("");
   const [apiKey, setApiKey] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
@@ -25,6 +26,7 @@ export default function PromptInput({ onSubmit, isLoading, onAbort }: PromptInpu
   );
 
   return (
+    <div className="w-full space-y-3">
     <form onSubmit={handleSubmit} className="w-full">
       <div
         className="rounded-2xl border border-white/10 bg-black/50 focus-within:border-white/25 transition-colors overflow-hidden"
@@ -83,5 +85,22 @@ export default function PromptInput({ onSubmit, isLoading, onAbort }: PromptInpu
         </div>
       </div>
     </form>
+
+    {onDemo && (
+      <div className="flex justify-center">
+        <button
+          type="button"
+          onClick={onDemo}
+          disabled={isLoading}
+          className="text-[11px] text-white/25 hover:text-white/50 transition-colors flex items-center gap-1.5 py-1 disabled:opacity-0"
+        >
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+          Try demo, no API key needed
+        </button>
+      </div>
+    )}
+    </div>
   );
 }
